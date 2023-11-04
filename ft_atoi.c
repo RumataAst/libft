@@ -1,9 +1,9 @@
 #include "libft.h"
 
 
-// incorrect
+// incorrect, adjust according to the man
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	minus;
 	int	number;
