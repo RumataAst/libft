@@ -6,24 +6,24 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 15:39:34 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/04 12:25:21 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/05 13:44:12 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void*	ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    size_t i;
-	
-    i = 0;
+	size_t	i;
+
+	i = 0;
 	while (i < n)
 	{
-        if ((char) c == ((char *)s)[i]) 
-            return ((void*) &s[i]);
+		if ((char) c == ((char *)s)[i])
+			return ((void*)&s[i]);
 		i++;
-    }
-    return (0);
+	}
+	return (0);
 }
 
 // int	main(void)
@@ -31,7 +31,6 @@ void*	ft_memchr(const void *s, int c, size_t n)
 // 	const void*	string;
 // 	int	c;
 // 	size_t	n;
-	
 // 	string = "Hello fuuuuuuuu";
 // 	c = 'f';
 // 	n = 10;

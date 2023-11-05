@@ -1,4 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/05 14:06:02 by akretov           #+#    #+#             */
+/*   Updated: 2023/11/05 14:06:21 by akretov          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
@@ -19,19 +32,18 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (str);
 }
 
+// char my_func(unsigned int i, char str)
+// {
+// 	printf("My inner function: index = %d and %c\n", i, str);
+// 	return str - 32;
+// }
 
-char my_func(unsigned int i, char str)
-{
-	printf("My inner function: index = %d and %c\n", i, str);
-	return str - 32;
-}
-
-int main()
-{
-	char str[10] = "hello.";
-	printf("The result is %s\n", str);
-	char *result = ft_strmapi(str, my_func);
-	printf("The result is %s\n", result);
-	free(result);
-	return 0;
-}
+// int main()
+// {
+// 	char str[10] = "hello.";
+// 	printf("The result is %s\n", str);
+// 	char *result = ft_strmapi(str, my_func);
+// 	printf("The result is %s\n", result);
+// 	free(result);
+// 	return 0;
+// }
