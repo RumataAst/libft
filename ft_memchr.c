@@ -6,7 +6,7 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 15:39:34 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 13:44:12 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/05 14:15:51 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if ((char) c == ((char *)s)[i])
-			return ((void*)&s[i]);
+			return ((void *)&s[i]);
 		i++;
 	}
 	return (0);
