@@ -6,7 +6,7 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 13:44:20 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 13:45:05 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/05 14:17:24 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 // {
 //   char source[] = "World";   
 //   char destination[] = "Hello ";   
-//   printf("Modified String: %i\n", ft_memcmp(destination, source, sizeof(source)));
+//   printf("Modified String: %i\n", 
+// +		ft_memcmp(destination, source, sizeof(source)));
 //   char source_1[] = "World";   
 //   char destination_1[] = "Hello ";   
-//   printf("Modified String: %i\n", memcmp(destination_1, source_1, sizeof(source_1)));
+//   printf("Modified String: %i\n", 
+// +		memcmp(destination_1, source_1, sizeof(source_1)));
 //   return (0);
 // }

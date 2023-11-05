@@ -6,7 +6,7 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:32:52 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 13:58:45 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/05 14:18:18 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,9 @@ void	ft_free(char *result)
 
 char	**ft_split(const char *s, char c)
 {
-	int	i;
-	int	j;
-	int	k;
+	int		i;
+	int		j;
+	int		k;
 	char	**result;
 
 	i = 0;
@@ -83,13 +83,13 @@ char	**ft_split(const char *s, char c)
 			{
 				ft_free(*result);
 				free(result);
-				return(0);
+				return (0);
 			}
 			k++;
 		}
-	else
-	    i++;
-    }
+		else
+			i++;
+	}
 	result[k] = NULL;
 	return (result);
 }
