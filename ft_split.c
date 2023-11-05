@@ -6,12 +6,11 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:32:52 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 14:18:18 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/05 14:24:41 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 int	ft_numb_words(const char *s, char c)
 {

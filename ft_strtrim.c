@@ -6,7 +6,7 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:09:28 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 14:12:53 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/05 14:26:18 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	size_t	i;
 	size_t	trimmed_length;
+	char	*result;
 
 	start = 0;
 	end = ft_strlen(s1) - 1;
@@ -37,7 +38,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 	if (s1[start] == '\0')
 	{
-		char *result = (char *)malloc(1);
+		result = (char *)malloc(1);
 		if (result)
 			result[0] = '\0';
 		return (result);
@@ -45,7 +46,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (end > start && ft_contains(s1[end], set))
 		end--;
 	trimmed_length = end - start + 1;
-	char *result = (char *)malloc(trimmed_length + 1);
+	result = (char *)malloc(trimmed_length + 1);
 	if (result != NULL)
 	{
 		while (i < trimmed_length)
@@ -53,7 +54,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 			result[i] = s1[start + i];
 			i++;
 		}
-		result[trimmed_length] = '\0'; 
+		result[trimmed_length] = '\0';
 	}
 	return (result);
 }
