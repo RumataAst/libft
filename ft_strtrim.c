@@ -6,7 +6,7 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:09:28 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 15:03:13 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/05 15:54:54 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	while (s1[start] && ft_contains(s1[start], set))
 		start++;
-	if (s1[start] == '\0')
-	{
-		result = (char *)malloc(1);
-		if (result)
-			result[0] = '\0';
-		return (result);
-	}
+	if (!s1)
+		return (0);
 	while (end > start && ft_contains(s1[end], set))
 		end--;
 	result = (char *)malloc(end - start + 2);
@@ -57,15 +52,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (result);
 }
 
-// int main(void)
-// {
-//     char string_1[] = ".,/";
-//     char string_2[] = "..,/.,..Hell./o ,/.";
-//     char *trimmed_string = ft_strtrim(string_2, string_1);
+int main(void)
+{
+    char string_1[] = ".,/";
+    char string_2[] = "..,/.,..Hell./o ,/.";
+    char *trimmed_string = ft_strtrim(string_2, string_1);
 
-//     printf("%s", trimmed_string);
+    printf("%s", trimmed_string);
 
-//     // Don't forget to free the allocated memory
-//     free(trimmed_string);
-//     return (0);
-// }
+    // Don't forget to free the allocated memory
+    free(trimmed_string);
+    return (0);
+}
