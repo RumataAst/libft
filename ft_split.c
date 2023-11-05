@@ -6,7 +6,7 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:32:52 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 14:24:41 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/05 15:17:17 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,15 +48,6 @@ char	*ft_strndup(const char *s, size_t n)
 	return (dest);
 }
 
-void	ft_free(char *result)
-{
-	int		i;
-
-	i = 0;
-	while (result[i])
-		free(result[i++]);
-}
-
 char	**ft_split(const char *s, char c)
 {
 	int		i;
@@ -80,7 +71,9 @@ char	**ft_split(const char *s, char c)
 			result[k] = ft_strndup(s + j, i - j);
 			if (result[k] == NULL)
 			{
-				ft_free(*result);
+				k = 0;
+				while (result[k])
+					free(result[k++]);
 				free(result);
 				return (0);
 			}

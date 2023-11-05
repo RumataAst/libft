@@ -6,11 +6,11 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 15:33:01 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 14:06:37 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/05 15:13:53 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

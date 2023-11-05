@@ -6,15 +6,17 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 13:51:04 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 13:51:28 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/05 15:18:22 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
 	while (*s)
 	{
-		write(fd, *s, 1);
+		write(fd, &s, 1);
 		s++;
 	}
 }

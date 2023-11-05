@@ -6,7 +6,7 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 13:25:49 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 13:26:53 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/05 15:13:27 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	ft_bzero(void *s, size_t n)
 	count = 0;
 	while (count < n)
 		((unsigned char *)s)[count++] = '\0';
-	return (s);
 }
 
 // int	main(void)

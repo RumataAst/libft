@@ -6,9 +6,11 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 13:47:53 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 13:48:59 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/05 15:16:10 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

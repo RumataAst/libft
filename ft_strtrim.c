@@ -6,7 +6,7 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:09:28 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 14:26:18 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/05 15:03:13 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	size_t	end;
 	size_t	i;
-	size_t	trimmed_length;
 	char	*result;
 
 	start = 0;
@@ -45,16 +44,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	while (end > start && ft_contains(s1[end], set))
 		end--;
-	trimmed_length = end - start + 1;
-	result = (char *)malloc(trimmed_length + 1);
+	result = (char *)malloc(end - start + 2);
 	if (result != NULL)
 	{
-		while (i < trimmed_length)
+		while (i < (end - start + 1))
 		{
 			result[i] = s1[start + i];
 			i++;
 		}
-		result[trimmed_length] = '\0';
+		result[end - start + 1] = '\0';
 	}
 	return (result);
 }
