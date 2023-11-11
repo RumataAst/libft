@@ -6,7 +6,7 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 15:33:01 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 15:13:53 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/11 17:35:28 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,12 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (0);
 	while (s1[i] && (s1[i] == s2[i]) && (i < n - 1))
 		i++;
-	return (s1[i] - s2[i]);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 
 // int	main(void)
 // {
-// 	const char string_1[] = "He1llo";
-// 	const char string_2[] = "He2ll";
-// 	printf("My function: %i\n", ft_strncmp(string_1,string_2,10));
-// 	printf("Original function %i", strncmp(string_1,string_2,10));
-
+// 	printf("My function: %i\n", ft_strncmp("test\200", "test\0", 6));
+// 	printf("Original function %i", strncmp("test\200", "test\0", 6));
 // 	return (0);
 // }
