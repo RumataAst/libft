@@ -6,36 +6,34 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:02:42 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 15:07:35 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/11 14:56:01 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <bsd/string.h>
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned char	*dest_1;
-	unsigned char	*src_1;
-	size_t			j;
-	size_t			i;
-	size_t			len;
+	size_t	s;
+	size_t	d;
+	size_t	di;
 
-	dest_1 = (unsigned char *)dest;
-	src_1 = (unsigned char *)src;
-	len = ft_strlen(dest) + ft_strlen(src);
-	j = 0;
-	i = ft_strlen(dest);
-	while (src_1[j] && (i + 1 < size))
+	if (!dst && size == 0)
+		return (ft_strlen(src));
+	d = ft_strlen(dst);
+	di = d;
+	if (size <= di)
+		return (size + ft_strlen(src));
+	s = 0;
+	while (src[s] && d + 1 < size)
 	{
-		dest_1[i] = src_1[j];
-		i++;
-		j++;
+		dst[d] = src[s];
+		s++;
+		d++;
 	}
-	dest_1[i] = '\0';
-	return (len);
+	dst[d] = 0;
+	return (di + ft_strlen(src));
 }
-
 // int main(void)
 // {
 //     char dest[15] = "Hello";

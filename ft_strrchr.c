@@ -6,7 +6,7 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 14:53:45 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 14:09:19 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/11 14:08:23 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ char	*ft_strrchr(const char *s, int c)
 	int	s_len;
 
 	s_len = ft_strlen(s);
-	while (s_len > 0)
+	while (s_len >= 0)
 	{
 		if ((char) c == s[s_len])
-			return ((char *) &s[s_len]);
+			return ((char *)(s + s_len));
 		s_len--;
 	}
 	return (NULL);

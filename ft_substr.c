@@ -6,7 +6,7 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:12:59 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 14:13:16 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/11 16:51:10 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,28 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*string;
-	size_t	i;
+	char	*new;
+	size_t	s_len;
+	size_t	finish;
 
-	string = (char *)malloc(ft_strlen(s));
-	i = 0;
-	while ((i <= len) && (i + len <= ft_strlen(s)))
-	{
-		string[i] = s[start];
-		start++;
-		i++;
-	}
-	string[i] = 0;
-	return (string);
+	if (!s)
+		return (0);
+	s_len = ft_strlen(s);
+	finish = 0;
+	if (start < s_len)
+		finish = s_len - start;
+	if (finish > len)
+		finish = len;
+	new = (char *)malloc(sizeof(char) * (finish + 1));
+	if (!new)
+		return (0);
+	ft_strlcpy(new, s + start, finish + 1);
+	return (new);
 }
 
 // int	main(void)
 // {
-// 	char s[20] = "Just a test";
-// 	int start = 4;
-// 	int len = 5;
-
-// 	printf("%s\n", ft_substr(s,start,len));
-// 	printf("%s\n", s);
+// 	char * str = strdup("1");
+// 	printf("%s\n", ft_substr(str, 42, 42000000));
 // 	return (0);
 // }

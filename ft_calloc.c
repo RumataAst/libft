@@ -6,7 +6,7 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 15:31:05 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 15:50:54 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/11 16:34:47 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,20 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	i;
-	void	*ptr;
-	char	*char_ptr;
-	size_t	total_size;
-	
-	
+	void	*array;
+	size_t	total;
+
 	if (nmemb == 0 || size == 0)
-		return (malloc(0));
-	
-	i = 0;
-	ptr = malloc(nmemb * size);
-	if (ptr)
 	{
-		char_ptr = (char *)ptr;
-		total_size = nmemb * size;
-		while (i < total_size)
-		{
-			char_ptr[i] = 0;
-			i++;
-		}
+		array = (void *)malloc(0);
+		return (array);
 	}
-	return (ptr);
+	total = nmemb * size;
+	if (nmemb != total / size)
+		return (NULL);
+	array = (void *)malloc(total);
+	if (array == NULL)
+		return (NULL);
+	ft_bzero(array, (total));
+	return (array);
 }
