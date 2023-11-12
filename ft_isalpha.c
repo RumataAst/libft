@@ -6,11 +6,13 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 13:36:21 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 13:36:39 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/12 15:36:09 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char c)
+#include "libft.h"
+
+int	ft_isalpha(int c)
 {
 	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 		return (1);

@@ -6,11 +6,13 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 13:34:38 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 13:36:01 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/12 15:36:04 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(char c)
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
 	if ((c >= 48 && c <= 57) || ((c >= 65 && c <= 90)
 			|| (c >= 97 && c <= 122)))

@@ -6,11 +6,13 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 13:37:59 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 13:39:48 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/12 15:36:25 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(char c)
+#include "libft.h"
+
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (1);

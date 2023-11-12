@@ -6,11 +6,13 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 13:37:34 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 13:37:47 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/12 15:36:20 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char c)
+#include "libft.h"
+
+int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 		return (1);

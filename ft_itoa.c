@@ -6,7 +6,7 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:59:26 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 14:14:48 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/12 14:59:56 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,13 @@ char	*ft_itoa(int n)
 	num = n;
 	size = ft_size(n);
 	number = (char *)malloc(size + 1);
+	if (!number)
+		return (0);
 	if (n < 0)
 	{
 		num *= -1;
 		number[0] = '-';
 	}
-	if (!number)
-		return (0);
 	number[size--] = '\0';
 	while (num > 0)
 	{

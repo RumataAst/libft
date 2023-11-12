@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 13:36:57 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/12 15:36:17 by akretov          ###   ########.fr       */
+/*   Created: 2023/11/12 15:06:26 by akretov           #+#    #+#             */
+/*   Updated: 2023/11/12 15:08:46 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	else
-		return (0);
+	t_list	*node;
+
+	if (!lst)
+		return ;
+	while (*lst)
+	{
+		node = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = node;
+	}
 }
