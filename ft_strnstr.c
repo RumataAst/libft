@@ -6,7 +6,7 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:07:00 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/05 14:24:08 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/16 14:06:37 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	n = ft_strlen(little);
 	if (n == 0)
 		return ((char *)big);
-	if (len < n)
+	if (len == 0)
 		return (NULL);
 	while (*big && len >= n)
 	{

@@ -6,7 +6,7 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:09:28 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/11 15:19:11 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/16 15:05:26 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 	char	*result;
 
+	if (s1 == 0 || !s1)
+		return (NULL);
 	start = 0;
 	end = ft_strlen(s1) - 1;
 	i = 0;
 	while (s1[start] && ft_contains(s1[start], set))
 		start++;
-	if (!s1)
-		return (0);
 	while (end > start && ft_contains(s1[end], set))
 		end--;
 	result = (char *)malloc(end - start + 2);

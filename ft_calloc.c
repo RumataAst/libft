@@ -6,7 +6,7 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 15:31:05 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/11 16:34:47 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/16 15:15:24 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	array = (void *)malloc(total);
 	if (array == NULL)
 		return (NULL);
-	ft_bzero(array, (total));
+	ft_bzero(array, total);
 	return (array);
 }

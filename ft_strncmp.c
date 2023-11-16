@@ -6,7 +6,7 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 15:33:01 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/11 17:43:15 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/16 15:04:22 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
-
-// int	main(void)
-// {
-// 	printf("My function: %i\n", ft_strncmp("test\200", "test\0", 6));
-// 	printf("Original function %i", strncmp("test\200", "test\0", 6));
-// 	return (0);
-// }

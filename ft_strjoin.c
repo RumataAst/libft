@@ -6,7 +6,7 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:02:12 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/11 15:21:21 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/16 14:18:55 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
+	if (s1 == 0 || s2 == 0)
+		return (NULL);
 	result = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (result != 0)
 	{
@@ -41,9 +43,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 // int     main(void)
 // {
-// 	char string_1[] = "";
-// 	char string_2[] = "Hell";
+// 	// char string_1[] = "Hell";
+// 	char string_2[0] = "";
 
-// 	printf("%s", ft_strjoin (string_1,string_2));
+// 	printf("%s", ft_strjoin (NULL,string_2));
 // 	return (0);
 // }

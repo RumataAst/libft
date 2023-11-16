@@ -16,7 +16,6 @@ OBJS = ${SRCS:.c=.o}
 OBJSB = ${SRCSB:.c=.o}
 NAME = libft.a
 LIBC = ar rcs
-INC	 = libft.h
 CC = cc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
@@ -24,14 +23,14 @@ CFLAGS = -Wall -Wextra -Werror
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) & $(SRCSB)
-	gcc -nostartfiles -shared -o libft.so $(OBJS) & $(OBJSB)
-	
 ${NAME}: ${OBJS}
 	${LIBC} ${NAME} ${OBJS}
 
 all: ${NAME}
+
+# so:
+# 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(SRCSB)
+# 	gcc -nostartfiles -shared -o libft.so $(OBJS) $(OBJSB)
 
 bonus: ${NAME} ${OBJSB}
 	${LIBC} ${NAME} ${OBJSB}

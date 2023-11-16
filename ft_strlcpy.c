@@ -6,7 +6,7 @@
 /*   By: akretov <akretov@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 14:42:46 by akretov           #+#    #+#             */
-/*   Updated: 2023/11/11 14:21:06 by akretov          ###   ########.fr       */
+/*   Updated: 2023/11/16 15:02:08 by akretov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	i = 0;
 	if (size != 0)
 	{
-		while (src [i] != '\0' && i < (size - 1))
+		while (src [i] && i < (size - 1))
 		{
 			dst[i] = src[i];
 			i++;
