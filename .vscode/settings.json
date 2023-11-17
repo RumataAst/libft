@@ -1,5 +1,17 @@
 {
 	"files.associations": {
-		"functional": "c"
+		"functional": "c",
+		"string": "c",
+		"new": "c",
+		"ostream": "c",
+		"typeinfo": "c",
+		"array": "c",
+		"bitset": "c",
+		"string_view": "c",
+		"initializer_list": "c",
+		"ranges": "c",
+		"span": "c",
+		"utility": "c",
+		"libft.h": "c"
 	}
 }
